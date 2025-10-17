@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel CHZIOS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="bg"></canvas>
+
+<!-- Tela de Login -->
+<div class="login-box" id="login">
+  <h2>FERRAO EXTERNAL</h2>
+  <!-- Imagem fixa de perfil -->
+  <img id="profilePreview" src="images/CHZ.png" alt="Foto de Perfil">
+  
+  <input type="password" id="password" placeholder="Digite a senha">
+  <button onclick="checkLogin()">Entrar</button>
+  <p class="credits">@FERRAODEV</p>
+</div>
+
+<!-- Painel Principal -->
+<div class="panel hidden" id="panel">
+  <div class="tabs">
+    <button class="tab-button active" onclick="openTab('funcoes')">Funções</button>
+    <button class="tab-button" onclick="openTab('info')">Info</button>
+  </div>
+  <div id="funcoes" class="tab-content active">
+    <h3>Configurações</h3>
+    <label class="checkbox">
+      <input type="checkbox" id="aimAssist">
+      <span></span> ASSISTENCIA DE MIRA
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" id="ativarFps">
+      <span></span> ATIVAR OTIMIZAÇAO
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" id="ativarPrecisao">
+      <span></span> ATIVAR NO RECOIL
+    </label>
+    <label>NO RECOIL: <span id="precValue">5</span></label>
+    <input type="range" min="0" max="10" value="5" id="precisao">
+    <label>OTIMIZAÇAO: <span id="fpsValue">60</span></label>
+    <input type="range" min="30" max="120" value="60" id="fps">
+    <button class="inject-btn" onclick="inject()">INJETAR FUNÇÕES NO JOGO</button>
+  </div>
+  <div id="info" class="tab-content">
+    <h3>Informações</h3>
+    <p>Auxilio external.</p>
+    <p>clique em injetar para ativar-lo e depois abre o jogo minimizado.</p>
+  </div>
+  <p class="credits">@ferraoxiter</p>
+</div>
+
+<script src="js/script.js"></script>
+
+
+</body></html>
