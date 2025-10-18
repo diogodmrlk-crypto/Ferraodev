@@ -9,7 +9,7 @@ async function checkLogin() {
   }
 
   // Senha mestre
-  if (input === "ferraodev") {
+  if (input === "ferraotrick") {
     openPanel();
     return;
   }
